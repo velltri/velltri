@@ -15,8 +15,22 @@ const config: Config = {
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },
+            clipPath: {
+                custom: "ellipse(50% 30% at 50% 100%)",
+            },
         },
     },
-    plugins: [nextui()],
+    plugins: [
+        nextui(),
+        function ({ addUtilities }: any) {
+            const newUtilities = {
+                ".clip-path-custom": {
+                    "clip-path": "ellipse(50% 30% at 50% 100%)",
+                },
+            }
+
+            addUtilities(newUtilities)
+        },
+    ],
 }
 export default config

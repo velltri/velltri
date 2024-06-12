@@ -6,6 +6,7 @@ import PageTitle from "@/components/PageTitle"
 import SideContent from "@/components/SideContent"
 
 import BgImage from "@/../public/bg-projects.png"
+import ImageClip from "@/components/ImageClip"
 
 export default function Projects() {
     return (
@@ -38,12 +39,8 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className="absolute h-full w-full flex-1 bg-black/10">
-                    <Image
-                        src={BgImage}
-                        alt="Background"
-                        className="h-full w-full object-cover"
-                    />
+                <div className="absolute h-full w-full">
+                    <ImageClip src={BgImage.src} />
                 </div>
             </div>
         </main>
