@@ -5,7 +5,7 @@ import CardItem from "@/components/CardItem"
 import PageTitle from "@/components/PageTitle"
 import SideContent from "@/components/SideContent"
 
-import BgHome from "@/../public/bg-home.png"
+import BgImage from "@/../public/bg-home.png"
 import MSPartner from "@/../public/ms-partner.png"
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
                                 description="Criamos soluções inovadoras que impulsionam sua empresa para o futuro."
                             />
                         </div>
-                        <div className="flex max-w-[330px] flex-1 flex-col gap-4">
+                        <div className="flex max-w-[360px] flex-1 flex-col gap-4">
                             <div className="shadow-lg">
                                 <Image
                                     src={MSPartner}
@@ -39,7 +39,7 @@ export default function Home() {
 
                 <div className="absolute h-full w-full flex-1 bg-black/10">
                     <Image
-                        src={BgHome}
+                        src={BgImage}
                         alt="Background"
                         className="h-full w-full object-cover"
                     />
