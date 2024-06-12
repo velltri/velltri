@@ -1,19 +1,34 @@
+"use client"
+
 import React from "react"
 import Link from "next/link"
 import { Button } from "@nextui-org/button"
+import { usePathname } from "next/navigation"
 
 import cn from "@/utils/cn"
 
 export default function Header() {
+    const pathname = usePathname()
     return (
         <header className="z-10 flex gap-4">
-            <HeaderButton href="/" text="Home" active />
-            <HeaderButton href="/founders" text="Fundadores" />
-            <HeaderButton href="/projects" text="Projetos" />
-            <HeaderButton href="/clientes" text="Clientes" />
+            {Routes.map((route) => (
+                <HeaderButton
+                    key={route.href}
+                    text={route.text}
+                    href={route.href}
+                    active={pathname === route.href}
+                />
+            ))}
         </header>
     )
 }
+
+const Routes = [
+    { href: "/", text: "Home" },
+    { href: "/founders", text: "Fundadores" },
+    { href: "/projects", text: "Projetos" },
+    { href: "/clientes", text: "Clientes" },
+]
 
 type HeaderButtonProps = {
     href: string
