@@ -24,6 +24,9 @@ export const metadata: Metadata = {
         "UI/UX",
         "Análise de Dados",
     ],
+    icons: {
+        icon: "/logo-round.png",
+    },
 }
 
 export default function RootLayout({
