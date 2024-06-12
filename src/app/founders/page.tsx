@@ -1,12 +1,18 @@
-import Image from "next/image"
+import { Metadata } from "next"
 
 import Header from "@/components/Header"
 import CardItem from "@/components/CardItem"
 import PageTitle from "@/components/PageTitle"
+import ImageClip from "@/components/ImageClip"
 import SideContent from "@/components/SideContent"
 
 import BgImage from "@/../public/bg-founders.png"
-import ImageClip from "@/components/ImageClip"
+
+export const metadata: Metadata = {
+    title: "Fundadores",
+    description:
+        "Um time de especialistas dedicados a transformar ideias em realidade com inovação e excelência.",
+}
 
 export default function Founders() {
     return (
