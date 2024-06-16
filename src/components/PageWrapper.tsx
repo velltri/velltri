@@ -1,5 +1,4 @@
 import React from "react"
-import { ScrollShadow } from "@nextui-org/scroll-shadow"
 
 import cn from "@/utils/cn"
 
@@ -7,6 +6,7 @@ import Header from "./Header"
 import ImageClip from "./ImageClip"
 import { SocialLinks } from "./SideContent"
 import { EmailButton, ScheduleButton } from "./DefaultButtons"
+import DraggableScroll from "./DraggableScroll"
 
 type PageWrapperProps = {
     children: React.ReactNode
@@ -52,16 +52,14 @@ export default function PageWrapper(props: PageWrapperProps) {
 export function CardsWrapper(props: { children: React.ReactNode }) {
     return (
         <>
+            {/* ! Normal */}
             <div className="hidden max-w-[360px] items-start gap-4 md:flex md:flex-col">
                 {props.children}
             </div>
-            <ScrollShadow
-                orientation="horizontal"
-                className="flex h-fit w-full max-w-[80vw] items-center gap-8 md:hidden"
-                hideScrollBar
-            >
+            {/* ! Scroll */}
+            <DraggableScroll className="flex h-fit w-full max-w-[80vw] snap-x items-center gap-8 overflow-x-auto pb-4 md:hidden">
                 {props.children}
-            </ScrollShadow>
+            </DraggableScroll>
         </>
     )
 }
