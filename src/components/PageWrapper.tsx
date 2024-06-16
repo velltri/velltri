@@ -2,6 +2,7 @@ import React from "react"
 import ImageClip from "./ImageClip"
 import Header from "./Header"
 import { SocialLinks } from "./SideContent"
+import { ScrollShadow } from "@nextui-org/scroll-shadow"
 
 type PageWrapperProps = {
     children: React.ReactNode
@@ -26,9 +27,16 @@ export default function PageWrapper(props: PageWrapperProps) {
 
 export function CardsWrapper(props: { children: React.ReactNode }) {
     return (
-        <div className="mt-16 flex max-w-[360px] flex-wrap items-start gap-8">
-            {props.children}
-        </div>
+        <>
+            <div className="mt-16 hidden max-w-[360px] items-start gap-8 md:flex md:flex-col">
+                {props.children}
+            </div>
+            <ScrollShadow className="h-fit w-full md:hidden">
+                <div className="mt-16 hidden max-w-[360px] items-start gap-8 md:flex md:flex-col">
+                    {props.children}
+                </div>
+            </ScrollShadow>
+        </>
     )
 }
 
