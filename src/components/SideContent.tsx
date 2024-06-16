@@ -37,16 +37,16 @@ export function SocialLinks(props: { alwaysShow?: boolean }) {
             </h2>
             <div className="flex gap-4">
                 <SocialLinkButton href="https://github.com/velltri">
-                    <FaGithub size={24} />
+                    <FaGithub size={18} />
                 </SocialLinkButton>
                 <SocialLinkButton href="https://www.linkedin.com/company/velltri">
-                    <FaLinkedin size={24} />
+                    <FaLinkedin size={18} />
                 </SocialLinkButton>
                 <SocialLinkButton href="https://api.whatsapp.com/send?phone=557399301800&text=Quero%20marcar%20uma%20reuni%C3%A3o%20com%20a%20Velltri">
-                    <FaWhatsapp size={24} />
+                    <FaWhatsapp size={18} />
                 </SocialLinkButton>
                 <SocialLinkButton href="mailto:contato@velltri.com">
-                    <FaEnvelope size={24} />
+                    <FaEnvelope size={18} />
                 </SocialLinkButton>
             </div>
         </div>
@@ -60,7 +60,7 @@ export function SocialLinkButton(props: {
     return (
         <Button
             as={Link}
-            className="min-w-0 bg-white px-2 text-foreground hover:bg-primary hover:text-white"
+            className="min-w-2 bg-white text-foreground hover:bg-primary hover:text-white"
             radius="full"
             href={props.href}
         >
