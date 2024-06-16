@@ -1,13 +1,12 @@
 import React from "react"
-import Link from "next/link"
-import { Button } from "@nextui-org/button"
 import { ScrollShadow } from "@nextui-org/scroll-shadow"
 
-import { FaCalendar } from "react-icons/fa"
+import cn from "@/utils/cn"
 
 import Header from "./Header"
 import ImageClip from "./ImageClip"
 import { SocialLinks } from "./SideContent"
+import { EmailButton, ScheduleButton } from "./DefaultButtons"
 
 type PageWrapperProps = {
     children: React.ReactNode
@@ -17,23 +16,31 @@ type PageWrapperProps = {
 export default function PageWrapper(props: PageWrapperProps) {
     return (
         <div className="relative flex flex-1 overflow-hidden rounded-3xl">
-            <div className="absolute right-0 top-0 z-10 w-[25vw] max-w-[370px]">
-                <Button
-                    as={Link}
-                    href="mailto:contato@velltri.com"
-                    variant="bordered"
-                    radius="full"
-                    className="w-full px-8 py-8 text-lg text-white hover:border-primary hover:bg-primary hover:text-white"
-                >
-                    <FaCalendar />
-                    Agendar reunião
-                </Button>
+            <div
+                className={cn(
+                    "absolute right-6 top-4 z-10 hidden w-[32%] max-w-[350px] xl:block",
+                )}
+            >
+                <ScheduleButton className={cn("w-full px-8 py-6 text-xl")} />
             </div>
             <div className="relative flex flex-1 flex-col p-8 shadow-xl">
                 <Header />
-                <div className="z-10 mt-20 flex flex-col justify-between gap-8 md:flex-row">
+                <div className="z-10 mt-12 flex flex-col justify-between gap-8 md:mt-20 md:flex-row">
                     {props.children}
                 </div>
+            </div>
+            <div
+                className={cn(
+                    "absolute bottom-4 left-0 right-0 z-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:px-8",
+                    "xl:hidden",
+                )}
+            >
+                <EmailButton
+                    className={cn("w-2/3 sm:w-full md:py-6 md:text-lg")}
+                />
+                <ScheduleButton
+                    className={cn("w-2/3 sm:w-full md:py-6 md:text-lg")}
+                />
             </div>
             <div className="absolute h-full w-full">
                 <ImageClip src={props.imgSrc} />

@@ -23,7 +23,7 @@ export default function Home() {
                     />
                 </TitleWrapper>
                 <CardsWrapper>
-                    <div className="h-full w-full min-w-[300px] md:min-w-0">
+                    <div className="h-fit w-full min-w-[300px] md:min-w-0">
                         <Image
                             src={MSPartner}
                             alt="Microsoft Partner"
