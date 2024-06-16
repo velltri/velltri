@@ -14,7 +14,7 @@ export default function Header() {
         <ScrollShadow
             orientation="horizontal"
             hideScrollBar
-            className="z-10 flex h-max min-h-[40px] w-full max-w-[65vw] xl:max-w-[35vw]"
+            className="z-10 mx-auto flex h-max min-h-[40px] w-full max-w-[65vw] sm:justify-center xl:mx-0 xl:max-w-[35vw] xl:justify-start"
         >
             <header className="flex gap-4">
                 {Routes.map((route) => (
