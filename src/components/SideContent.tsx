@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@nextui-org/button"
 
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 
 import cn from "@/utils/cn"
 
@@ -32,36 +32,39 @@ export function SocialLinks(props: { alwaysShow?: boolean }) {
                 props.alwaysShow ? "flex" : "flex xl:hidden",
             )}
         >
-            <h2 className="text-2xl font-bold">Entre em contato</h2>
-            <div className="flex flex-col gap-2">
-                <Link className="underline" href="mailto:contato@velltri.com">
-                    contato@velltri.com
-                </Link>
-                <Link
-                    className="underline"
-                    href="https://api.whatsapp.com/send?phone=557399301800&text=Quero%20marcar%20uma%20reuni%C3%A3o%20com%20a%20Velltri"
-                >
-                    (73) 9 9930-1800
-                </Link>
-                <div className="flex gap-4">
-                    <Button
-                        as={Link}
-                        className="min-w-0 bg-white px-2 text-primary"
-                        radius="full"
-                        href="https://github.com/velltri"
-                    >
-                        <FaGithub size={24} />
-                    </Button>
-                    <Button
-                        as={Link}
-                        className="min-w-0 bg-white px-2 text-primary"
-                        radius="full"
-                        href="https://github.com/velltri"
-                    >
-                        <FaLinkedin size={24} />
-                    </Button>
-                </div>
+            <h2 className="text-medium font-medium lg:text-2xl lg:font-bold">
+                Entre em contato
+            </h2>
+            <div className="flex gap-4">
+                <SocialLinkButton href="https://github.com/velltri">
+                    <FaGithub size={24} />
+                </SocialLinkButton>
+                <SocialLinkButton href="https://www.linkedin.com/company/velltri">
+                    <FaLinkedin size={24} />
+                </SocialLinkButton>
+                <SocialLinkButton href="https://api.whatsapp.com/send?phone=557399301800&text=Quero%20marcar%20uma%20reuni%C3%A3o%20com%20a%20Velltri">
+                    <FaWhatsapp size={24} />
+                </SocialLinkButton>
+                <SocialLinkButton href="mailto:contato@velltri.com">
+                    <FaEnvelope size={24} />
+                </SocialLinkButton>
             </div>
         </div>
+    )
+}
+
+export function SocialLinkButton(props: {
+    href: string
+    children: React.ReactNode
+}) {
+    return (
+        <Button
+            as={Link}
+            className="min-w-0 bg-white px-2 text-foreground hover:bg-primary hover:text-white"
+            radius="full"
+            href={props.href}
+        >
+            {props.children}
+        </Button>
     )
 }
