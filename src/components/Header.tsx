@@ -34,7 +34,7 @@ const Routes = [
     { href: "/", text: "Home" },
     { href: "/founders", text: "Fundadores" },
     { href: "/projects", text: "Projetos" },
-    { href: "/clients", text: "Clientes" },
+    // { href: "/clients", text: "Clientes" },
 ]
 
 type HeaderButtonProps = {
