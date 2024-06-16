@@ -26,7 +26,7 @@ export default function PageWrapper(props: PageWrapperProps) {
 
 export function CardsWrapper(props: { children: React.ReactNode }) {
     return (
-        <div className="mt-16 flex max-w-[360px] flex-wrap gap-8">
+        <div className="mt-16 flex max-w-[360px] flex-wrap items-start gap-8">
             {props.children}
         </div>
     )
@@ -34,9 +34,9 @@ export function CardsWrapper(props: { children: React.ReactNode }) {
 
 export function TitleWrapper(props: { children: React.ReactNode }) {
     return (
-        <>
-            <div className="flex flex-col gap-4">{props.children}</div>
+        <div className="flex flex-col gap-4">
+            <div>{props.children}</div>
             <SocialLinks />
-        </>
+        </div>
     )
 }
