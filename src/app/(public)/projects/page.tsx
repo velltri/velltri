@@ -1,9 +1,8 @@
 import { Metadata } from "next"
 
-import Header from "@/components/Header"
 import CardItem from "@/components/CardItem"
 import PageTitle from "@/components/PageTitle"
-import ImageClip from "@/components/ImageClip"
+import MainWrapper from "@/components/MainWrapper"
 import SideContent from "@/components/SideContent"
 
 import BgImage from "@/../public/bg-projects.png"
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function Projects() {
     return (
-        <main className="mx-auto flex h-dvh w-dvw max-w-[1500px] gap-16 p-16">
+        <MainWrapper>
             <SideContent />
             <PageWrapper imgSrc={BgImage.src}>
                 <TitleWrapper>
@@ -44,6 +43,6 @@ export default function Projects() {
                     />
                 </CardsWrapper>
             </PageWrapper>
-        </main>
+        </MainWrapper>
     )
 }

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 
 import CardItem from "@/components/CardItem"
 import PageTitle from "@/components/PageTitle"
+import MainWrapper from "@/components/MainWrapper"
 import SideContent from "@/components/SideContent"
 import PageWrapper, {
     CardsWrapper,
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function Founders() {
     return (
-        <main className="mx-auto flex h-dvh w-dvw max-w-[1500px] gap-16 p-16">
+        <MainWrapper>
             <SideContent />
             <PageWrapper imgSrc={BgImage.src}>
                 <TitleWrapper>
@@ -69,6 +70,6 @@ export default function Founders() {
                     />
                 </CardsWrapper>
             </PageWrapper>
-        </main>
+        </MainWrapper>
     )
 }

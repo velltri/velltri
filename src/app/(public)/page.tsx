@@ -2,6 +2,7 @@ import Image from "next/image"
 
 import CardItem from "@/components/CardItem"
 import PageTitle from "@/components/PageTitle"
+import MainWrapper from "@/components/MainWrapper"
 import SideContent from "@/components/SideContent"
 import PageWrapper, {
     CardsWrapper,
@@ -13,7 +14,7 @@ import MSPartner from "@/../public/ms-partner.png"
 
 export default function Home() {
     return (
-        <main className="mx-auto flex h-dvh w-dvw max-w-[1500px] gap-16 p-16">
+        <MainWrapper>
             <SideContent />
             <PageWrapper imgSrc={BgImage.src}>
                 <TitleWrapper>
@@ -37,6 +38,6 @@ export default function Home() {
                     />
                 </CardsWrapper>
             </PageWrapper>
-        </main>
+        </MainWrapper>
     )
 }
