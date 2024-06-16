@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
-import { ScrollShadow } from "@nextui-org/scroll-shadow"
 import { Button } from "@nextui-org/button"
+import { ScrollShadow } from "@nextui-org/scroll-shadow"
 
 import { FaCalendar } from "react-icons/fa"
 
@@ -48,10 +48,12 @@ export function CardsWrapper(props: { children: React.ReactNode }) {
             <div className="mt-16 hidden max-w-[360px] items-start gap-4 md:flex md:flex-col">
                 {props.children}
             </div>
-            <ScrollShadow className="h-fit w-full md:hidden">
-                <div className="mt-16 hidden max-w-[360px] items-start gap-8 md:flex md:flex-col">
-                    {props.children}
-                </div>
+            <ScrollShadow
+                orientation="horizontal"
+                className="flex h-fit w-full max-w-[60vw] items-center gap-8 md:hidden"
+                hideScrollBar
+            >
+                {props.children}
             </ScrollShadow>
         </>
     )

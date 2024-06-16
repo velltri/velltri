@@ -23,8 +23,13 @@ export default function Home() {
                     />
                 </TitleWrapper>
                 <CardsWrapper>
-                    <div className="shadow-lg">
-                        <Image src={MSPartner} alt="Microsoft Partner" />
+                    <div className="h-full w-full min-w-[300px] md:min-w-0">
+                        <Image
+                            src={MSPartner}
+                            alt="Microsoft Partner"
+                            className="max-h-full max-w-full shadow-lg"
+                            height={336}
+                        />
                     </div>
                     <CardItem
                         title="350k+"
