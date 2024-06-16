@@ -4,22 +4,29 @@ import React from "react"
 import Link from "next/link"
 import { Button } from "@nextui-org/button"
 import { usePathname } from "next/navigation"
+import { ScrollShadow } from "@nextui-org/scroll-shadow"
 
 import cn from "@/utils/cn"
 
 export default function Header() {
     const pathname = usePathname()
     return (
-        <header className="z-10 flex gap-4">
-            {Routes.map((route) => (
-                <HeaderButton
-                    key={route.href}
-                    text={route.text}
-                    href={route.href}
-                    active={pathname === route.href}
-                />
-            ))}
-        </header>
+        <ScrollShadow
+            orientation="horizontal"
+            hideScrollBar
+            className="z-10 flex w-full max-w-[40vw] xl:max-w-[35vw]"
+        >
+            <header className="flex gap-4">
+                {Routes.map((route) => (
+                    <HeaderButton
+                        key={route.href}
+                        text={route.text}
+                        href={route.href}
+                        active={pathname === route.href}
+                    />
+                ))}
+            </header>
+        </ScrollShadow>
     )
 }
 
