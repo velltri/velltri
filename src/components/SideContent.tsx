@@ -11,14 +11,14 @@ import { EmailButton } from "./DefaultButtons"
 
 export default function SideContent() {
     return (
-        <div className="hidden h-full flex-col justify-between xl:flex">
+        <div className="relative hidden h-full flex-col justify-between xl:flex">
             <div>
                 <Image src={Logo} alt="Velltri logo" />
             </div>
             <SocialLinks alwaysShow />
             <div></div>
-            <div className="fixed bottom-16 z-10 w-[35vw] max-w-[500px]">
-                <EmailButton />
+            <div className="absolute bottom-4 z-10 w-[35vw] max-w-[500px]">
+                <EmailButton className={cn("w-full px-8 py-6 text-xl")} />
             </div>
         </div>
     )
