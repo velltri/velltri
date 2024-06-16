@@ -1,11 +1,11 @@
 "use client"
 
-import useWindowDimension from "@/hooks/useWindowDimension"
+import { useWindowSize } from "@uidotdev/usehooks"
 
 export default function ImageClip({ src }: { src: string }) {
-    const { width } = useWindowDimension()
+    const { width } = useWindowSize()
 
-    const isDesktop = width > 1280
+    const isDesktop = width ? width > 1280 : true
 
     if (isDesktop) {
         return (
