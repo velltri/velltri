@@ -30,6 +30,7 @@ export default function Founders() {
                 <CardsWrapper>
                     <CardItem
                         title="Igor Rocha"
+                        href="/igor"
                         description={
                             <span>
                                 Lidera com uma visão centrada na{" "}
@@ -43,6 +44,7 @@ export default function Founders() {
                     />
                     <CardItem
                         title="Isaac Lima"
+                        href="/isaac"
                         description={
                             <span>
                                 Garante que nossas soluções sejam{" "}
@@ -53,6 +55,7 @@ export default function Founders() {
                     />
                     <CardItem
                         title="João Rupp"
+                        href="/rupp"
                         description={
                             <span>
                                 Conduz com foco na{" "}
