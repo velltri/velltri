@@ -57,7 +57,7 @@ export function CardsWrapper(props: { children: React.ReactNode }) {
             </div>
             <ScrollShadow
                 orientation="horizontal"
-                className="flex h-fit w-full max-w-[60vw] items-center gap-8 md:hidden"
+                className="flex h-fit w-full max-w-[80vw] items-center gap-8 md:hidden"
                 hideScrollBar
             >
                 {props.children}
