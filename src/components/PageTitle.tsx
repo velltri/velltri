@@ -7,8 +7,8 @@ type PageTitleProps = {
 
 export default function PageTitle(props: PageTitleProps) {
     return (
-        <div className="md:max-w-[360px]">
-            <h1 className="text-3xl font-bold leading-tight md:text-[3rem]">
+        <div className="md:max-w-[360px] xl:mt-24">
+            <h1 className="text-3xl font-bold leading-tight lg:text-[3rem]">
                 {props.title}
             </h1>
             {props.description && (
