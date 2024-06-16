@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@nextui-org/button"
 
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
 
 import cn from "@/utils/cn"
 
@@ -15,15 +15,17 @@ export default function SideContent() {
                 <Image src={Logo} alt="Velltri logo" />
             </div>
             <SocialLinks alwaysShow />
-            <div>
+            <div></div>
+            <div className="fixed bottom-16 z-10 w-[35vw] max-w-[500px]">
                 <Button
                     as={Link}
                     href="mailto:contato@velltri.com"
                     variant="bordered"
                     radius="full"
-                    className="px-8 text-white"
+                    className="w-full px-8 py-8 text-xl text-white hover:border-primary hover:bg-primary hover:text-white"
                 >
-                    Clique para enviar um email
+                    <FaEnvelope />
+                    Enviar email
                 </Button>
             </div>
         </div>

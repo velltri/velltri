@@ -28,7 +28,7 @@ export default function PageWrapper(props: PageWrapperProps) {
 export function CardsWrapper(props: { children: React.ReactNode }) {
     return (
         <>
-            <div className="mt-16 hidden max-w-[360px] items-start gap-8 md:flex md:flex-col">
+            <div className="mt-16 hidden max-w-[360px] items-start gap-4 md:flex md:flex-col">
                 {props.children}
             </div>
             <ScrollShadow className="h-fit w-full md:hidden">
