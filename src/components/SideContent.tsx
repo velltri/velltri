@@ -22,7 +22,7 @@ export default function SideContent() {
                     href="mailto:contato@velltri.com"
                     variant="bordered"
                     radius="full"
-                    className="w-full px-8 py-8 text-xl text-white hover:border-primary hover:bg-primary hover:text-white"
+                    className="w-full px-8 py-8 text-lg text-white hover:border-primary hover:bg-primary hover:text-white"
                 >
                     <FaEnvelope />
                     Enviar email

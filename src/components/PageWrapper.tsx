@@ -1,8 +1,13 @@
 import React from "react"
-import ImageClip from "./ImageClip"
-import Header from "./Header"
-import { SocialLinks } from "./SideContent"
+import Link from "next/link"
 import { ScrollShadow } from "@nextui-org/scroll-shadow"
+import { Button } from "@nextui-org/button"
+
+import { FaCalendar } from "react-icons/fa"
+
+import Header from "./Header"
+import ImageClip from "./ImageClip"
+import { SocialLinks } from "./SideContent"
 
 type PageWrapperProps = {
     children: React.ReactNode
@@ -12,6 +17,18 @@ type PageWrapperProps = {
 export default function PageWrapper(props: PageWrapperProps) {
     return (
         <div className="relative flex flex-1 overflow-hidden rounded-3xl">
+            <div className="absolute right-0 top-0 z-10 w-[25vw] max-w-[370px]">
+                <Button
+                    as={Link}
+                    href="mailto:contato@velltri.com"
+                    variant="bordered"
+                    radius="full"
+                    className="w-full px-8 py-8 text-lg text-white hover:border-primary hover:bg-primary hover:text-white"
+                >
+                    <FaCalendar />
+                    Agendar reunião
+                </Button>
+            </div>
             <div className="relative flex flex-1 flex-col p-8 shadow-xl">
                 <Header />
                 <div className="z-10 mt-20 flex flex-col justify-between gap-8 md:flex-row">
