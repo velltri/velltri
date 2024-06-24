@@ -1,15 +1,22 @@
-import { Chip } from "@nextui-org/chip"
-
-import NotFound from "@/components/NotFound"
-import { ExistingFounders, Founders } from "@/data/founders"
-import { Button } from "@nextui-org/button"
 import Link from "next/link"
 import { Metadata } from "next"
+import { Chip } from "@nextui-org/chip"
+import { Button } from "@nextui-org/button"
+
+import { ExistingFounders, Founders } from "@/data/founders"
+
+import NotFound from "@/components/NotFound"
 
 type FounderPageProps = {
     params: {
         founder: string
     }
+}
+
+export function generateStaticParams() {
+    return ExistingFounders.map((founder) => ({
+        founder,
+    }))
 }
 
 export function generateMetadata(props: FounderPageProps): Metadata {
@@ -26,6 +33,9 @@ export function generateMetadata(props: FounderPageProps): Metadata {
     return {
         title: `${founderData.name}`,
         description: founderData.description,
+        icons: {
+            icon: "/logo_round.png",
+        },
     }
 }
 

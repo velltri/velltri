@@ -1,4 +1,4 @@
-import Icon from "@/../public/icon.svg"
+import Icon from "@/../public/assets/icon.svg"
 import Image from "next/image"
 
 export default function VelltriIcon() {

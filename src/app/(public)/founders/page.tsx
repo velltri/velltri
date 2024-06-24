@@ -9,7 +9,7 @@ import PageWrapper, {
     TitleWrapper,
 } from "@/components/PageWrapper"
 
-import BgImage from "@/../public/bg-founders.png"
+import BgImage from "@/../public/assets/bg-founders.png"
 
 export const metadata: Metadata = {
     title: "Fundadores",

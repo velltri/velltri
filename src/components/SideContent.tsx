@@ -6,7 +6,7 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 
 import cn from "@/utils/cn"
 
-import Logo from "@/../public/logo.svg"
+import Logo from "@/../public/assets/logo.svg"
 import { EmailButton } from "./DefaultButtons"
 
 export default function SideContent() {

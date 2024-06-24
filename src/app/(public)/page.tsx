@@ -9,8 +9,8 @@ import PageWrapper, {
     TitleWrapper,
 } from "@/components/PageWrapper"
 
-import BgImage from "@/../public/bg-home.png"
-import MSPartner from "@/../public/ms-partner.png"
+import BgImage from "@/../public/assets/bg-home.png"
+import MSPartner from "@/../public/assets/ms-partner.png"
 
 export default function Home() {
     return (
@@ -25,8 +25,9 @@ export default function Home() {
                 </TitleWrapper>
                 <CardsWrapper>
                     <div className="h-fit w-full min-w-[300px] snap-center md:min-w-0">
-                        <Image
-                            src={MSPartner}
+                        {/* eslint-disable-next-line */}
+                        <img
+                            src={MSPartner.src}
                             alt="Microsoft Partner"
                             className="max-h-full max-w-full shadow-lg"
                             height={336}

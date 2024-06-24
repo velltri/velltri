@@ -5,7 +5,7 @@ import PageTitle from "@/components/PageTitle"
 import MainWrapper from "@/components/MainWrapper"
 import SideContent from "@/components/SideContent"
 
-import BgImage from "@/../public/bg-projects.png"
+import BgImage from "@/../public/assets/bg-projects.png"
 import PageWrapper, {
     CardsWrapper,
     TitleWrapper,
