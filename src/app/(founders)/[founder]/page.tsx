@@ -34,7 +34,7 @@ export function generateMetadata(props: FounderPageProps): Metadata {
         title: `${founderData.name}`,
         description: founderData.description,
         icons: {
-            icon: "/logo_round.png",
+            icon: "/assets/logo_round.png",
         },
     }
 }

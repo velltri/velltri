@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         "Análise de Dados",
     ],
     icons: {
-        icon: "/logo_round.png",
+        icon: "/assets/logo_round.png",
     },
 }
 
