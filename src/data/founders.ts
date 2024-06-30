@@ -14,6 +14,18 @@ export const Founders = {
                 name: "GitHub",
                 url: "https://github.com/igorroc",
             },
+            {
+                name: "Behance",
+                url: "https://behance.net/igorrocha",
+            },
+            {
+                name: "Ferramentas UESC",
+                url: "https://uesc.vercel.app",
+            },
+            {
+                name: "Colegiado de Computação",
+                url: "https://colcic.uesc.br",
+            },
         ],
     },
     isaac: {
