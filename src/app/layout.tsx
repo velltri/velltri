@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
+
 import "./globals.css"
+
+import BackgroundParticles from "@/components/BackgroundParticles"
 
 const font = Montserrat({ subsets: ["latin"] })
 
@@ -36,7 +39,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
-            <body className={font.className}>{children}</body>
+            <body className={font.className}>
+                <BackgroundParticles />
+                {children}
+            </body>
         </html>
     )
 }
