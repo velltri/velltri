@@ -5,8 +5,9 @@ import cn from "@/utils/cn"
 import Header from "./Header"
 import ImageClip from "./ImageClip"
 import { SocialLinks } from "./SideContent"
-import { EmailButton, ScheduleButton } from "./DefaultButtons"
 import DraggableScroll from "./DraggableScroll"
+import { EmailButton, ScheduleButton } from "./DefaultButtons"
+import TiltElement from "./TiltElement"
 
 type PageWrapperProps = {
     children: React.ReactNode
@@ -43,7 +44,9 @@ export default function PageWrapper(props: PageWrapperProps) {
                 />
             </div>
             <div className="absolute h-full w-full">
-                <ImageClip src={props.imgSrc} />
+                <TiltElement className="h-full w-full">
+                    <ImageClip src={props.imgSrc} />
+                </TiltElement>
             </div>
         </div>
     )
