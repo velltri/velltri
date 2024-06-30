@@ -21,7 +21,7 @@ export default function CardItem(props: CardItemProps) {
     return props.href ? (
         <Link
             href={props.href}
-            className="relative rounded-xl shadow-white backdrop-blur-lg transition-all hover:bg-white/10 hover:shadow-xl"
+            className="relative rounded-xl shadow-white backdrop-blur-lg transition-all hover:bg-white/5 hover:shadow-xl"
         >
             {content}
 

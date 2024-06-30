@@ -1,13 +1,13 @@
 import { Metadata } from "next"
 
-import CardItem from "@/components/CardItem"
-import PageTitle from "@/components/PageTitle"
-import MainWrapper from "@/components/MainWrapper"
-import SideContent from "@/components/SideContent"
 import PageWrapper, {
     CardsWrapper,
     TitleWrapper,
 } from "@/components/PageWrapper"
+import CardItem from "@/components/CardItem"
+import PageTitle from "@/components/PageTitle"
+import MainWrapper from "@/components/MainWrapper"
+import SideContent from "@/components/SideContent"
 
 import BgImage from "@/../public/assets/bg-founders.png"
 
