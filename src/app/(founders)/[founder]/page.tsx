@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 import { Chip } from "@nextui-org/chip"
 import { Button } from "@nextui-org/button"
+import { Tooltip } from "@nextui-org/tooltip"
 
 import { ExistingFounders, Founders } from "@/data/founders"
 
@@ -56,16 +57,24 @@ export default function FounderPage(props: FounderPageProps) {
                     className="h-48 w-48 rounded-full object-cover"
                 />
                 <h1 className="text-4xl font-bold">{founderData.name}</h1>
-                <Chip
+                <Tooltip
+                    showArrow
                     color="primary"
-                    variant="bordered"
-                    className="pl-2 text-white"
-                    startContent={
-                        <div className="h-2 w-2 rounded-full bg-primary" />
-                    }
+                    content={<Link href="/">@ Velltri</Link>}
                 >
-                    {founderData.role}
-                </Chip>
+                    <Link href="/">
+                        <Chip
+                            color="primary"
+                            variant="bordered"
+                            className="pl-2 text-white"
+                            startContent={
+                                <div className="h-2 w-2 rounded-full bg-primary" />
+                            }
+                        >
+                            {founderData.role}
+                        </Chip>
+                    </Link>
+                </Tooltip>
                 <div className="mx-auto text-center text-sm">
                     <p>{founderData.description}</p>
                 </div>
