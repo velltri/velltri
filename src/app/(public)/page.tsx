@@ -4,6 +4,7 @@ import CardItem from "@/components/CardItem"
 import PageTitle from "@/components/PageTitle"
 import MainWrapper from "@/components/MainWrapper"
 import SideContent from "@/components/SideContent"
+import Footer from '@/components/Footer';
 import PageWrapper, {
     CardsWrapper,
     TitleWrapper,
@@ -37,6 +38,7 @@ export default function Home() {
                         title="350k+"
                         description="Mais de 350 mil transações realizadas nos nossos servidores"
                     />
+                    <Footer />  
                 </CardsWrapper>
             </PageWrapper>
         </MainWrapper>

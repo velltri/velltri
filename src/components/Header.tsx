@@ -32,7 +32,7 @@ export default function Header() {
 
 const Routes = [
     { href: "/", text: "Home" },
-    { href: "/founders", text: "Fundadores" },
+    { href: "/founders", text: "Quem Somos" },
     { href: "/projects", text: "Projetos" },
     // { href: "/clients", text: "Clientes" },
 ]
